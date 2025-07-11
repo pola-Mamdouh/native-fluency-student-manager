@@ -54,14 +54,27 @@ body {
   border-radius: 16px;
 }
 
+.counter-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+  white-space: normal;
+}
+
 @media (max-width: 900px) {
   .main-container {
-    padding: 12px;
-    margin: 8px;
+    padding: 10px;
+    margin: 4px;
     border-radius: 8px;
   }
   .MuiTableContainer-root {
     overflow-x: auto;
+  }
+  .counter-bar {
+    font-size: 12px;
+    gap: 4px;
   }
 }
 
@@ -73,5 +86,9 @@ body {
   }
   .MuiTableContainer-root {
     overflow-x: auto;
+  }
+  .counter-bar {
+    font-size: 11px;
+    gap: 2px;
   }
 }

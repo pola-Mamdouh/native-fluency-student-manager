@@ -23,12 +23,13 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
+  maxWidth: '95vw',
   maxHeight: '90vh',
   overflowY: 'auto',
   bgcolor: 'background.paper',
   borderRadius: 2,
   boxShadow: 24,
-  p: 4,
+  p: { xs: 1, sm: 2, md: 4 },
 };
 
 export default function AddStudentModal({ onAdd, open, setOpen, editingStudent }) {
@@ -140,18 +141,20 @@ export default function AddStudentModal({ onAdd, open, setOpen, editingStudent }
               margin="normal"
             />
             <LocalizationProvider dateAdapter={AdapterDateFns}>
-              <DatePicker
-                label="Start Date"
-                value={form.startDate}
-                onChange={(date) => setForm({ ...form, startDate: date })}
-                renderInput={(params) => <TextField {...params} fullWidth margin="normal" />}
-              />
-              <DatePicker
-                label="End Date"
-                value={form.endDate}
-                onChange={(date) => setForm({ ...form, endDate: date })}
-                renderInput={(params) => <TextField {...params} fullWidth margin="normal" />}
-              />
+              <Box sx={{ display: { xs: 'block', sm: 'flex' }, gap: 2 }}>
+                <DatePicker
+                  label="Start Date"
+                  value={form.startDate}
+                  onChange={(date) => setForm({ ...form, startDate: date })}
+                  renderInput={(params) => <TextField {...params} fullWidth margin="normal" />}
+                />
+                <DatePicker
+                  label="End Date"
+                  value={form.endDate}
+                  onChange={(date) => setForm({ ...form, endDate: date })}
+                  renderInput={(params) => <TextField {...params} fullWidth margin="normal" />}
+                />
+              </Box>
             </LocalizationProvider>
             <TextField
               label="Email"

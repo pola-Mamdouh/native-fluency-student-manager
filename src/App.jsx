@@ -78,7 +78,7 @@ function App() {
       <NavBar />
       <div className="main-container">
         {/* Student counter */}
-        <div style={{ display: 'flex', alignItems: 'center', marginBottom: 16, flexWrap: 'nowrap', gap: 6, overflowX: 'hidden', whiteSpace: 'nowrap' }}>
+        <div className="counter-bar">
           <h2 style={{ flex: 1, margin: 0, fontSize: 20, minWidth: 80 }}>Students</h2>
           <span style={{ fontSize: 14, color: '#1976d2', fontWeight: 500, marginRight: 8, flexShrink: 0 }}>Total: {students.length}</span>
           <span style={{ fontSize: 13, color: '#388e3c', fontWeight: 500, marginRight: 6, flexShrink: 0 }}>Kids: {totalKids}</span>
@@ -95,7 +95,7 @@ function App() {
               {lc.level}: {lc.count}
             </span>
           ))}
-        </div>
+      </div>
         <Routes>
           <Route path="/" element={<StudentListAll />} />
           <Route path="/category/:category" element={<StudentListByCategory />} />

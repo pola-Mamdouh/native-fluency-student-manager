@@ -48,37 +48,37 @@ export default function StudentList({ students, filterCategory, filterLevel, onD
       {filtered.length === 0 ? (
         <Typography>No students found.</Typography>
       ) : (
-        <TableContainer component={Paper}>
-          <Table>
+        <TableContainer component={Paper} sx={{ width: '100%', overflowX: 'auto' }}>
+          <Table size="small">
             <TableHead>
               <TableRow>
-                <TableCell>Name</TableCell>
-                <TableCell>Phone</TableCell>
-                <TableCell>Level</TableCell>
-                <TableCell>Category</TableCell>
-                <TableCell>Fees</TableCell>
-                <TableCell>Duration</TableCell>
-                <TableCell>Start Date</TableCell>
-                <TableCell>End Date</TableCell>
-                <TableCell>Email</TableCell>
-                <TableCell>Address</TableCell>
-                <TableCell>Actions</TableCell>
+                <TableCell sx={{ fontSize: { xs: 11, sm: 14 }, px: { xs: 0.5, sm: 2 } }}>Name</TableCell>
+                <TableCell sx={{ fontSize: { xs: 11, sm: 14 }, px: { xs: 0.5, sm: 2 } }}>Phone</TableCell>
+                <TableCell sx={{ fontSize: { xs: 11, sm: 14 }, px: { xs: 0.5, sm: 2 } }}>Level</TableCell>
+                <TableCell sx={{ fontSize: { xs: 11, sm: 14 }, px: { xs: 0.5, sm: 2 } }}>Category</TableCell>
+                <TableCell sx={{ fontSize: { xs: 11, sm: 14 }, px: { xs: 0.5, sm: 2 } }}>Fees</TableCell>
+                <TableCell sx={{ fontSize: { xs: 11, sm: 14 }, px: { xs: 0.5, sm: 2 } }}>Duration</TableCell>
+                <TableCell sx={{ fontSize: { xs: 11, sm: 14 }, px: { xs: 0.5, sm: 2 } }}>Start Date</TableCell>
+                <TableCell sx={{ fontSize: { xs: 11, sm: 14 }, px: { xs: 0.5, sm: 2 } }}>End Date</TableCell>
+                <TableCell sx={{ fontSize: { xs: 11, sm: 14 }, px: { xs: 0.5, sm: 2 } }}>Email</TableCell>
+                <TableCell sx={{ fontSize: { xs: 11, sm: 14 }, px: { xs: 0.5, sm: 2 } }}>Address</TableCell>
+                <TableCell sx={{ fontSize: { xs: 11, sm: 14 }, px: { xs: 0.5, sm: 2 } }}>Actions</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {filtered.map((student) => (
                 <TableRow key={student.id}>
-                  <TableCell>{student.name}</TableCell>
-                  <TableCell>{student.phone}</TableCell>
-                  <TableCell>{student.level}</TableCell>
-                  <TableCell>{student.category}</TableCell>
-                  <TableCell>{student.fees}</TableCell>
-                  <TableCell>{student.duration}</TableCell>
-                  <TableCell>{student.startDate ? new Date(student.startDate).toLocaleDateString() : ''}</TableCell>
-                  <TableCell>{student.endDate ? new Date(student.endDate).toLocaleDateString() : ''}</TableCell>
-                  <TableCell>{student.email}</TableCell>
-                  <TableCell>{student.address}</TableCell>
-                  <TableCell>
+                  <TableCell sx={{ fontSize: { xs: 11, sm: 13 }, px: { xs: 0.5, sm: 2 } }}>{student.name}</TableCell>
+                  <TableCell sx={{ fontSize: { xs: 11, sm: 13 }, px: { xs: 0.5, sm: 2 } }}>{student.phone}</TableCell>
+                  <TableCell sx={{ fontSize: { xs: 11, sm: 13 }, px: { xs: 0.5, sm: 2 } }}>{student.level}</TableCell>
+                  <TableCell sx={{ fontSize: { xs: 11, sm: 13 }, px: { xs: 0.5, sm: 2 } }}>{student.category}</TableCell>
+                  <TableCell sx={{ fontSize: { xs: 11, sm: 13 }, px: { xs: 0.5, sm: 2 } }}>{student.fees}</TableCell>
+                  <TableCell sx={{ fontSize: { xs: 11, sm: 13 }, px: { xs: 0.5, sm: 2 } }}>{student.duration}</TableCell>
+                  <TableCell sx={{ fontSize: { xs: 11, sm: 13 }, px: { xs: 0.5, sm: 2 } }}>{student.startDate ? new Date(student.startDate).toLocaleDateString() : ''}</TableCell>
+                  <TableCell sx={{ fontSize: { xs: 11, sm: 13 }, px: { xs: 0.5, sm: 2 } }}>{student.endDate ? new Date(student.endDate).toLocaleDateString() : ''}</TableCell>
+                  <TableCell sx={{ fontSize: { xs: 11, sm: 13 }, px: { xs: 0.5, sm: 2 } }}>{student.email}</TableCell>
+                  <TableCell sx={{ fontSize: { xs: 11, sm: 13 }, px: { xs: 0.5, sm: 2 } }}>{student.address}</TableCell>
+                  <TableCell sx={{ fontSize: { xs: 11, sm: 13 }, px: { xs: 0.5, sm: 2 } }}>
                     <IconButton color="primary" onClick={() => onEdit && onEdit(student)}>
                       <EditIcon />
                     </IconButton>
