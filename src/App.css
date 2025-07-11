@@ -1,0 +1,77 @@
+body {
+  background: #f4f6f8;
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  background: #f4f6f8;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  overflow-x: auto;
+}
+
+.MuiTableContainer-root {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.MuiTableCell-head {
+  background: #f0f2f5;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.MuiTableCell-body {
+  font-size: 0.97rem;
+}
+
+.MuiButton-containedPrimary {
+  background: #1976d2;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+
+.MuiButton-containedPrimary:hover {
+  background: #1565c0;
+}
+
+.MuiFab-root {
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
+}
+
+.MuiDialog-paper {
+  border-radius: 16px;
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    padding: 12px;
+    margin: 8px;
+    border-radius: 8px;
+  }
+  .MuiTableContainer-root {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    padding: 2px;
+    margin: 0;
+    border-radius: 0;
+  }
+  .MuiTableContainer-root {
+    overflow-x: auto;
+  }
+}
